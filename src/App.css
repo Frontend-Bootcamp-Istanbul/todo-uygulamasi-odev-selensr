@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Cantarell);
 
 body {
-  font-family: 'Cantarell', Lucida Grande, sans-serif;
+  font-family: "Cantarell", Lucida Grande, sans-serif;
   font-size: 100%;
   line-height: 1.5;
 }
@@ -11,7 +11,7 @@ h3 {
   color: #fff;
   padding: 10px 15px;
   border-radius: 0 0 2px 2px;
-  margin:0;
+  margin: 0;
   margin-bottom: 20px;
 }
 ul {
@@ -19,13 +19,13 @@ ul {
   margin: 0 0 20px 0;
   line-height: 1.5;
 }
-input[type=text] {
+input[type="text"] {
   border: 1px solid #ccc;
   padding: 7px 5px;
   width: 150px;
   font-size: 14px;
 }
-input[type=submit] {
+input[type="submit"] {
   border: 1px solid #ccc;
   margin-left: 15px;
   padding: 5px 15px;
@@ -34,7 +34,7 @@ input[type=submit] {
 #todo {
   background-color: whitesmoke;
   border-radius: 3px;
-  width: 850px;
+  width: 1000px;
   margin: 30px auto;
   border: 1px solid #ddd;
 }
@@ -42,13 +42,12 @@ input[type=submit] {
 .todo-list {
   display: inline-block;
   width: 30%;
-  padding:10px;
+  padding: 10px;
   vertical-align: top;
 }
 .todo-list + .todo-list {
   border-left: 2px solid darkgray;
 }
-
 
 button {
   border: 1px solid #ccc;
@@ -57,7 +56,7 @@ button {
   font-size: 1em;
 }
 
-button.remove-all{
+button.remove-all {
   width: 90%;
   margin: 0 auto;
   display: block;
@@ -79,7 +78,7 @@ button.remove-all{
 }
 
 .remove-todo {
-  background-color: #76030B;
+  background-color: #76030b;
   font-weight: bold;
   display: inline-block;
   margin-left: 10px;
