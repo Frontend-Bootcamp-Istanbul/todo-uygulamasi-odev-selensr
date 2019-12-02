@@ -46,9 +46,9 @@ class App extends Component {
     });
   }
 
-  removeTodo(id) {
+  removeTodo = id => {
     this.props.removeTodo(id);
-  }
+  };
 
   removeAll = () => {
     this.props.removeAll();
