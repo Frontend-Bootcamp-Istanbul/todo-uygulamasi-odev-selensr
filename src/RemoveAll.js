@@ -1,4 +1,6 @@
 import React from "react";
+import { connect } from "react-redux";
+import { removeAll } from "./actionCreators/actionCreators";
 
 class RemoveAll extends React.Component {
   render() {
@@ -6,7 +8,7 @@ class RemoveAll extends React.Component {
       <button
         className="remove-all"
         onClick={() => {
-          this.props.onRemoveAll();
+          this.props.removeAll();
         }}
       >
         Tümünü Sil
@@ -14,5 +16,9 @@ class RemoveAll extends React.Component {
     );
   }
 }
-
-export default RemoveAll;
+const mapDispatchToProps = dispatch => ({
+  removeAll: todos => {
+    dispatch(removeAll(todos));
+  }
+});
+export default connect(null, mapDispatchToProps)(RemoveAll);

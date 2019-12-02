@@ -1,4 +1,6 @@
 import React from "react";
+import { connect } from "react-redux";
+import { removeTodo, completeStatus } from "./actionCreators/actionCreators";
 
 function Todo(props) {
   const { content, id, checked } = props;
@@ -10,7 +12,7 @@ function Todo(props) {
     <div
       className={itemClass}
       onClick={() => {
-        props.onCheckedToggle(id);
+        props.completeStatus(id);
       }}
     >
       {content}
@@ -18,7 +20,7 @@ function Todo(props) {
         className="remove-todo"
         onClick={e => {
           e.stopPropagation();
-          props.onTodoRemove(id);
+          props.removeTodo(id);
         }}
       >
         X
@@ -27,4 +29,12 @@ function Todo(props) {
   );
 }
 
-export default Todo;
+const mapDispatchToProps = dispatch => ({
+  removeTodo: todo => {
+    dispatch(removeTodo(todo));
+  },
+  completeStatus: todos => {
+    dispatch(completeStatus(todos));
+  }
+});
+export default connect(null, mapDispatchToProps)(Todo);
